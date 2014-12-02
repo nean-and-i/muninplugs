@@ -55,14 +55,14 @@ else
     if [ -f $FILE ] && [ -r $FILE ]; then
     # Sat Nov 29 16:07:27 2014: action 1: processed=51802 failed=0 suspended=0 suspended.duration=0 resumed=0
     
-    # v4
+    # action 1
     /usr/bin/tac $FILE| P="action 1:" awk '$0 ~ ENVIRON["P"] {split($8,a,"=") ; print "received.value " a[2]; exit}'
     #tac /var/log/rsyslog.stats| P="action 1:" awk '$0 ~ ENVIRON["P"] {split($8,a,"=") ; print "received.value " a[2]; exit}'
     
-    # wifi
+    # action 6
     # tac /var/log/rsyslog.stats| P="action 6:" awk '$0 ~ ENVIRON["P"] {split($8,a,"=") ; print "received.value " a[2]; exit}'
     
-    # v6
+    # action 8
     # tac /var/log/rsyslog.stats| P="action 8:" awk '$0 ~ ENVIRON["P"] {split($8,a,"=") ; print "received.value " a[2]; exit}'
     
     unset IFS
